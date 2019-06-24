@@ -7,11 +7,13 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+
 import com.example.repairgrab.R;
 
 public class LoginActivity extends AppCompatActivity {
 
     private Spinner dropdownlist;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,16 +23,10 @@ public class LoginActivity extends AppCompatActivity {
         ArrayAdapter adapter = ArrayAdapter.createFromResource(this,R.array.spinner_item,R.layout.spinner_item );
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        dropdownlist.setAdapter(adapter);
 
 
     }
 
-    public void clickToLogin(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
-    }
 
     public void clickToLoginAsRepairer(View view) {
         Intent intent = new Intent(this, RepairerHomeActivity.class);
