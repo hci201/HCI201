@@ -30,7 +30,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import de.hdodenhof.circleimageview.CircleImageView;
 import pl.bclogic.pulsator4droid.library.PulsatorLayout;
 
-public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
+public class  MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     private Dialog myDialog, reviewDialog;

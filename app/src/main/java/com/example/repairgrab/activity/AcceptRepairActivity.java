@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import com.example.repairgrab.R;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
 
 public class AcceptRepairActivity extends AppCompatActivity {
 
@@ -19,9 +21,10 @@ public class AcceptRepairActivity extends AppCompatActivity {
         btnAccept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), RepairActivity.class);
+                Intent intent = new Intent(v.getContext(), MovingToCustomerActivity.class);
                 startActivity(intent);
             }
         });
     }
+
 }

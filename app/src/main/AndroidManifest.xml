@@ -16,10 +16,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/App">
-        <activity android:name=".activity.SettingActivity">
-
-
-        </activity>
+        <activity android:name=".activity.MovingToCustomerActivity"></activity>
+        <activity android:name=".activity.RepairMovingActivity" />
+        <activity android:name=".activity.SettingActivity" />
         <activity android:name=".activity.SummaryActivity" />
         <activity android:name=".activity.ReceiptActivity" />
         <activity android:name=".activity.RepairActivity" />

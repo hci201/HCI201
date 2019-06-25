@@ -16,7 +16,6 @@ import com.example.repairgrab.activity.MapsActivity;
 public class HomeFragment extends Fragment {
 
     private CardView findRepairer;
-    private CardView consultRepairer;
 
 
     @Override
