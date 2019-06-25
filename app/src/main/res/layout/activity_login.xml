@@ -5,24 +5,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.LoginActivity"
-    android:background="@drawable/background_login">
+    android:background="@drawable/login_background">
 
-    <Spinner
-        android:layout_marginTop="40dp"
-        android:id="@+id/dropdownlist"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:spinnerMode="dropdown"
+    <RelativeLayout
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/edittextstyle"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="5dp"
-        android:drawableRight="@drawable/up_arrow_button"
+        android:orientation="horizontal">
+        <Spinner
+            android:id="@+id/dropdownlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"
+            android:layout_centerHorizontal="true"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="5dp"
 
-        >
+            > </Spinner>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:src="@drawable/up_arrow_button" />
+
+    </RelativeLayout>
 
 
-    </Spinner>
+
     <LinearLayout
         android:id="@+id/linear_edittext"
         android:paddingTop="150dp"
@@ -33,7 +46,7 @@
 
         <EditText
             android:layout_marginLeft="15dp"
-
+            android:fontFamily="@font/avenir_light"
             android:textColor="#fff"
             android:textColorHint="#fff"
             android:layout_width="300dp"
@@ -54,14 +67,13 @@
             android:layout_marginLeft="15dp"
             android:textColor="#fff"
             android:textColorHint="#fff"
-
+            android:fontFamily="@font/avenir_light"
             android:layout_marginTop="10dp"
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:layout_gravity="center"
             android:drawablePadding="20dp"
             android:background="@android:color/transparent"
-
             android:drawableLeft="@drawable/ic_password_small"
             android:hint="Password"/>
         <ImageView
@@ -81,21 +93,26 @@
         android:paddingHorizontal="50dp"
         >
         <Button
+            android:fontFamily="@font/avenir_light"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Login"
             android:textSize="15dp"
+            android:onClick="clickToLogin"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:background="@drawable/background_login_button"
             />
         <Button
+            android:fontFamily="@font/avenir_light"
+
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Signup"
+            android:text="Sign up"
+            android:onClick="clickToLogin"
             android:textSize="15dp"
             android:textAllCaps="false"
             android:textColor="#FA6400"
@@ -114,8 +131,9 @@
 
         >
         <Button
-            android:textSize="15dp"
 
+            android:textSize="18dp"
+            android:onClick="clickToLogin"
             android:paddingVertical="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -124,13 +142,15 @@
             android:drawableLeft="@drawable/ic_google"
             android:text="Login with Google"
             android:textAllCaps="false"
-
+            android:fontFamily="@font/avenir_light"
             android:drawableRight="@drawable/ic_right_arrow_small"
 
             />
         <Button
-            android:textSize="15dp"
+            android:fontFamily="@font/avenir_light"
+            android:textSize="18dp"
             android:paddingVertical="5dp"
+            android:onClick="clickToLogin"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -142,10 +162,13 @@
             android:drawableRight="@drawable/ic_right_arrow_small"
 
             />
+
+
         
     </LinearLayout>
 
     <Button
+        android:fontFamily="@font/avenir_light"
         android:textSize="15dp"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"

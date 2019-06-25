@@ -179,11 +179,12 @@
         <Button
 
             android:id="@+id/btnCall"
+            android:textColor="@color/white"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="Đăng xuất"
-            android:background="@color/colorPrimaryDark"/>
+            android:background="@color/orangeDark"/>
 
 
     </LinearLayout>
