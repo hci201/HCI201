@@ -16,7 +16,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/App">
-        <activity android:name=".activity.SummaryActivity"></activity>
+        <activity android:name=".activity.SettingActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".activity.SummaryActivity" />
         <activity android:name=".activity.ReceiptActivity" />
         <activity android:name=".activity.RepairActivity" />
         <activity android:name=".activity.AcceptRepairActivity" />
@@ -27,11 +35,7 @@
         <activity android:name=".activity.BookRepairerActivity" />
         <activity android:name=".activity.MapsActivity" />
         <activity android:name=".activity.LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <!--
             The API key for Google Maps-based APIs is defined as a string resource.
