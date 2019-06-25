@@ -31,14 +31,14 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        consultRepairer = getActivity().findViewById(R.id.consult_repairer);
-        consultRepairer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                MaintenanceFragment maintenanceFragment = new MaintenanceFragment();
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, maintenanceFragment).commit();
-            }
-        });
+//        consultRepairer = getActivity().findViewById(R.id.consult_repairer);
+//        consultRepairer.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                MaintenanceFragment maintenanceFragment = new MaintenanceFragment();
+//                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, maintenanceFragment).commit();
+//            }
+//        });
     }
 
     @Nullable
