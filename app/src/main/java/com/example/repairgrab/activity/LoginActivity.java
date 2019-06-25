@@ -23,7 +23,7 @@ public class LoginActivity extends AppCompatActivity {
         ArrayAdapter adapter = ArrayAdapter.createFromResource(this,R.array.spinner_item,R.layout.spinner_item );
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-
+        dropdownlist.setAdapter(adapter);
 
     }
 
@@ -32,5 +32,10 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent = new Intent(this, RepairerHomeActivity.class);
         startActivity(intent);
         finish();
+    }
+
+    public void clickToLogin(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }
