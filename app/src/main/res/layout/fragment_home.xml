@@ -2,12 +2,45 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/home_background">
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Xin chào,"
+                android:layout_marginLeft="90dp"
+                android:textSize="18sp"
+                android:textColor="@color/white"/>
+            <TextView
+                android:fontFamily="@font/quicksand_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:textSize="29sp"
+                android:textStyle="bold"
+                android:text="Vũ Tinh!"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
     <LinearLayout
 
         android:id="@+id/layout_card"
         android:clipToPadding="false"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="160dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -17,30 +50,32 @@
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
             android:id="@+id/find_repairer"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
             android:layout_margin="10dp"
-            android:background="@drawable/bg_find">
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                >
 
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:background="@drawable/circlebackground"
-                    android:src="@drawable/ic_technics"
+                    android:src="@drawable/thietbibep_ic"
                     android:padding="10dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:layout_marginTop="5dp"
-                    android:text="Tìm thợ quanh đây"/>
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="Thiết bị bếp"/>
             </LinearLayout>
 
 
@@ -49,32 +84,192 @@
         <android.support.v7.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
-            android:id="@+id/consult_repairer"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:onClick="clickToFind"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
             android:layout_margin="10dp"
-            android:background="@drawable/bg_find">
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                >
 
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:background="@drawable/circlebackground2"
-                    android:src="@drawable/ic_maintenance"
+                    android:src="@drawable/thietbidien_ic"
                     android:padding="10dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:layout_marginTop="5dp"
-                    android:text="Gói bảo dưỡng VIP"/>
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="Thiết bị điện"/>
             </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/card2"
+        android:layout_below="@id/layout_card"
+        android:clipToPadding="false"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:onClick="clickToFind"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/nuoc_ic"
+                    android:padding="10dp"/>
+
+                <TextView
+                    android:fontFamily="@font/quicksand_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Nước"/>
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:onClick="clickToFind"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/khoa_ic"
+                    android:padding="10dp"/>
+
+                <TextView
+                    android:fontFamily="@font/quicksand_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Khóa"/>
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@id/card2"
+        android:clipToPadding="false"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:onClick="clickToFind"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/goivip_ic"
+                    android:padding="10dp"/>
+
+                <TextView
+                    android:fontFamily="@font/quicksand_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Gói bảo dưỡng"/>
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:onClick="clickToFind"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/khuyenmai_ic"
+                    android:padding="10dp"/>
+
+                <TextView
+                    android:fontFamily="@font/quicksand_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Khuyến mãi"/>
+            </LinearLayout>
+
 
         </android.support.v7.widget.CardView>
     </LinearLayout>
