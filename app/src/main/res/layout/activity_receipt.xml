@@ -97,10 +97,11 @@
                 android:layout_marginLeft="10dp"
                 android:layout_width="150dp"
                 android:layout_height="60dp"
+                android:textColor="@color/white"
                 android:text="Tiến hành"
                 android:layout_gravity="bottom|center"
                 android:layout_marginBottom="10dp"
-                android:background="@color/colorPrimaryDark"
+                android:background="@color/orangeDark"
                 android:src="@drawable/ic_check_black_24dp"
                 android:onClick="clickToReceipt"/>
         </LinearLayout>
