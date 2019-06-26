@@ -29,7 +29,7 @@ public class BookRepairerActivity extends AppCompatActivity {
         btnCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), RatingActivity.class);
+                Intent intent = new Intent(v.getContext(), RepairMovingActivity.class);
                 startActivity(intent);
                 finish();
             }
