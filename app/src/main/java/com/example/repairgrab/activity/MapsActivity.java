@@ -46,7 +46,7 @@ public class  MapsActivity extends AppCompatActivity implements OnMapReadyCallba
 
         //dialog
         myDialog = new Dialog(this);
-        myDialog.setContentView(R.layout.dialog_contact);
+        myDialog.setContentView(R.layout.dialog_contact_2);
         myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         //review dialog
@@ -55,7 +55,7 @@ public class  MapsActivity extends AppCompatActivity implements OnMapReadyCallba
         reviewDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         Button btnCall = myDialog.findViewById(R.id.btn_dialog_call);
-        Button btnClose = myDialog.findViewById(R.id.btnClose);
+        //Button btnClose = myDialog.findViewById(R.id.btnClose);
         Button btnReview = myDialog.findViewById(R.id.btn_review);
         Button btnCloseReview = reviewDialog.findViewById(R.id.btn_close_review);
         btnCloseReview.setOnClickListener(new View.OnClickListener() {
@@ -70,12 +70,12 @@ public class  MapsActivity extends AppCompatActivity implements OnMapReadyCallba
                 reviewDialog.show();
             }
         });
-        btnClose.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                myDialog.cancel();
-            }
-        });
+//        btnClose.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                myDialog.cancel();
+//            }
+//        });
         btnCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -16,7 +16,8 @@ public class BookRepairerActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_book_repairer);
+       //setContentView(R.layout.activity_book_repairer)
+        setContentView(R.layout.dialog_contact_3);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
